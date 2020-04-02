@@ -1,44 +1,46 @@
 //
-//  ViewController.swift
-//  CountWater
+//  InterfaceController.swift
+//  CountWaterWatch Extension
 //
 //  Created by Hilla on 3/29/20.
 //  Copyright © 2020 Hilla Guz. All rights reserved.
 //
 
-import UIKit
+import WatchKit
+import Foundation
 import HealthKit
 
-class ViewController: UIViewController {
-    @IBOutlet var amountLabel: UILabel!
-    @IBOutlet var cupButton: UIButton!
-    @IBOutlet var bottleButton: UIButton!
+class InterfaceController: WKInterfaceController {
+    @IBOutlet var amountLabel: WKInterfaceLabel!
     
     let hkStore = HKHealthStore()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        design(button: cupButton)
-        design(button: bottleButton)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+        // Configure interface objects here.
+    }
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
         authorizeHealthKit()
         readWater()
     }
     
-    private func design(button: UIButton) {
-        let buttonHeight = button.frame.size.height
-        button.layer.cornerRadius = buttonHeight / 2.0
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
     }
-    
-    @IBAction func onTouchUpInsideCupButton(_ sender: UIButton) {
+    @IBAction func onClickCup() {
         writeWater(amount: 200)
     }
-    
-    @IBAction func onTouchUpInsideBottleButton(_ sender: UIButton) {
+    @IBAction func onClickBottle() {
         writeWater(amount: 450)
     }
     
     private func authorizeHealthKit() {
+        
         HealthKitSetupAssistant().authorize { (authorized, error) in
             guard authorized else {
                 let baseMessage = "HealthKit Authorization Failed"
@@ -67,18 +69,17 @@ class ViewController: UIViewController {
             print("failed trigger \(String(describing: error))")
             return
         }
-        print("triggering to iphone")
+        print("triggering to watch")
         self.readWater()
         completionHandler()
     }
     
-    
     @objc private func readWater() {
-        print("read water iphone")
+        print("read water watch")
         WaterDataStore().readWater(completion: {total in
             print("total water: \(total)")
             DispatchQueue.main.async {
-                self.amountLabel.text = "\(total) ml"
+                self.amountLabel.setText("\(total) ml")
             }
         })
     }
@@ -87,4 +88,3 @@ class ViewController: UIViewController {
         WaterDataStore().writeWater(amount: amount)
     }
 }
-

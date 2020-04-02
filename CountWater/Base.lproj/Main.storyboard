@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" layoutMarginsFollowReadableWidth="YES" text="Water Counter" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xii-eM-wdU">
+                                <rect key="frame" x="10" y="99" width="230" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0 ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ef-U0-ITZ">
+                                <rect key="frame" x="10" y="155" width="48.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="749" verticalHuggingPriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JDK-TF-JBF">
+                                <rect key="frame" x="113" y="362.5" width="188" height="47"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title=" 1 cup (200 ml) ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTouchUpInsideCupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYW-pe-kn0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="749" verticalHuggingPriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-qK-c9B">
+                                <rect key="frame" x="113" y="424.5" width="188" height="47"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title=" 1 bottle (450 ml) ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTouchUpInsideBottleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWL-3L-3hC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Ef-U0-ITZ" firstAttribute="top" secondItem="xii-eM-wdU" secondAttribute="bottom" constant="15" id="Agf-Dh-h2F"/>
+                            <constraint firstItem="xii-eM-wdU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Eo8-01-ELW"/>
+                            <constraint firstItem="Y6f-qK-c9B" firstAttribute="centerX" secondItem="JDK-TF-JBF" secondAttribute="centerX" id="IHy-Yq-aIL"/>
+                            <constraint firstItem="Y6f-qK-c9B" firstAttribute="top" secondItem="JDK-TF-JBF" secondAttribute="bottom" constant="15" id="QtY-Jj-FAB"/>
+                            <constraint firstItem="Y6f-qK-c9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPR-fB-LwE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xii-eM-wdU" secondAttribute="trailing" symbolic="YES" id="Rd0-3p-lzj"/>
+                            <constraint firstItem="4Ef-U0-ITZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="VWn-Tf-WOi"/>
+                            <constraint firstItem="Y6f-qK-c9B" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JDK-TF-JBF" secondAttribute="trailing" id="VyM-Ml-Gal"/>
+                            <constraint firstItem="xii-eM-wdU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="XlE-aH-FEj"/>
+                            <constraint firstItem="JDK-TF-JBF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z61-lY-XwN"/>
+                            <constraint firstItem="Y6f-qK-c9B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JDK-TF-JBF" secondAttribute="leading" id="glm-kS-5eB"/>
+                            <constraint firstItem="Y6f-qK-c9B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ozR-By-zXD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Ef-U0-ITZ" secondAttribute="trailing" symbolic="YES" id="qR0-Ut-msn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="4Ef-U0-ITZ" id="M9E-hH-Vwp"/>
+                        <outlet property="bottleButton" destination="Y6f-qK-c9B" id="jku-Ua-H7D"/>
+                        <outlet property="cupButton" destination="JDK-TF-JBF" id="zBZ-ya-QLc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
         </scene>
     </scenes>
 </document>
