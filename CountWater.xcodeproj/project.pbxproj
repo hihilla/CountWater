@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF069F5E2441C22B00755465 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */; };
+		AF069F5F2441C22B00755465 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */; };
+		AF069F602441C22B00755465 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */; };
+		AF069F612441C22B00755465 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */; };
+		AF069F642441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
+		AF069F652441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
+		AF069F662441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
+		AF069F672441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
+		AF069F682441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
 		AFA170F82430EEF300571201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA170F72430EEF300571201 /* AppDelegate.swift */; };
 		AFA170FA2430EEF300571201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA170F92430EEF300571201 /* SceneDelegate.swift */; };
 		AFA170FC2430EEF300571201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA170FB2430EEF300571201 /* ViewController.swift */; };
@@ -92,6 +101,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		AF069F632441CCCD00755465 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AFA170F42430EEF300571201 /* CountWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA170F72430EEF300571201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA170F92430EEF300571201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,9 +168,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF069F5C2441C21400755465 /* SettingsBundleHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */,
+			);
+			path = SettingsBundleHelper;
+			sourceTree = "<group>";
+		};
+		AF069F622441CCBE00755465 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AF069F632441CCCD00755465 /* Settings.bundle */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AFA170EB2430EEF300571201 = {
 			isa = PBXGroup;
 			children = (
+				AF069F622441CCBE00755465 /* Settings */,
+				AF069F5C2441C21400755465 /* SettingsBundleHelper */,
 				AFC1078924350B4E00D139FC /* HealthKitHelpers */,
 				AFC107802433E20100D139FC /* Extensions */,
 				AFA170F62430EEF300571201 /* CountWater */,
@@ -399,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF069F642441CCCD00755465 /* Settings.bundle in Resources */,
 				AFA171042430EEF600571201 /* LaunchScreen.storyboard in Resources */,
 				AFA171012430EEF600571201 /* Assets.xcassets in Resources */,
 				AFA170FF2430EEF300571201 /* Main.storyboard in Resources */,
@@ -409,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF069F652441CCCD00755465 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF069F662441CCCD00755465 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA17138243121AE00571201 /* Assets.xcassets in Resources */,
+				AF069F672441CCCD00755465 /* Settings.bundle in Resources */,
 				AFA17136243121AA00571201 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF069F682441CCCD00755465 /* Settings.bundle in Resources */,
 				AFA1714A243121B000571201 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF069F5E2441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC107852433E24600D139FC /* NotificationExtension.swift in Sources */,
 				AFA170FC2430EEF300571201 /* ViewController.swift in Sources */,
 				AFA1712D243100CC00571201 /* HealthKitSetupAssistant.swift in Sources */,
@@ -457,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC107862433E24600D139FC /* NotificationExtension.swift in Sources */,
+				AF069F5F2441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC1078C2435275C00D139FC /* WaterDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC107872433E24600D139FC /* NotificationExtension.swift in Sources */,
+				AF069F602441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC1078D2435275C00D139FC /* WaterDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF069F612441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC107882433E24600D139FC /* NotificationExtension.swift in Sources */,
 				AFA17148243121AE00571201 /* NotificationController.swift in Sources */,
 				AFEE08072431270D00D2BCAC /* HealthKitSetupAssistant.swift in Sources */,

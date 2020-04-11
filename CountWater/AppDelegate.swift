@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print("HealthKit Successfully Authorized.")
         }
+        SettingsBundleHelper.checkAndExecuteSettings()
         return true
     }
     

@@ -15,13 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet var bottleButton: UIButton!
     
     let hkStore = HKHealthStore()
+    var bottleAmount = SettingsBundleHelper.DefaultBottleSize
+    var cupAmount = SettingsBundleHelper.DefaultCupSize
+    
+    deinit { //Not needed for iOS9 and above. ARC deals with the observer in higher versions.
+        NotificationCenter.default.removeObserver(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         design(button: cupButton)
         design(button: bottleButton)
         authorizeHealthKit()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(ViewController.defaultsChanged),
+            name: UserDefaults.didChangeNotification,
+            object: nil
+        )
+        defaultsChanged()
         readWater()
     }
     
@@ -31,11 +43,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTouchUpInsideCupButton(_ sender: UIButton) {
-        writeWater(amount: 200)
+        writeWater(amount: Double(cupAmount))
     }
     
     @IBAction func onTouchUpInsideBottleButton(_ sender: UIButton) {
-        writeWater(amount: 450)
+        writeWater(amount: Double(bottleAmount))
     }
     
     private func authorizeHealthKit() {
@@ -62,23 +74,37 @@ class ViewController: UIViewController {
         hkStore.execute(query)
     }
     
+    func registerSettingsBundle(){
+        let appDefaults = [String:AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
+    
+    @objc func defaultsChanged(){
+        SettingsBundleHelper.checkAndExecuteSettings()
+        let bottleSize = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.BottleSizeKey)
+        bottleButton.setTitle("1 bottle (\(bottleSize) ml)", for: .normal)
+        bottleAmount = bottleSize
+        
+        let cupSize = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.CupSizeKey)
+        cupButton.setTitle("1 cup (\(cupSize) ml)", for: .normal)
+        cupAmount = cupSize
+    }
+    
     func waterChangedHandler(query: HKObserverQuery, completionHandler: @escaping HKObserverQueryCompletionHandler, error: Error?) {
         guard error == nil else {
             print("failed trigger \(String(describing: error))")
             return
         }
-        print("triggering to iphone")
         self.readWater()
         completionHandler()
     }
     
     
     @objc private func readWater() {
-        print("read water iphone")
         WaterDataStore().readWater(completion: {total in
             print("total water: \(total)")
             DispatchQueue.main.async {
-                self.amountLabel.text = "\(total) ml"
+                self.amountLabel.text = "\(Int(total)) ml"
             }
         })
     }

@@ -69,13 +69,11 @@ class InterfaceController: WKInterfaceController {
             print("failed trigger \(String(describing: error))")
             return
         }
-        print("triggering to watch")
         self.readWater()
         completionHandler()
     }
     
     @objc private func readWater() {
-        print("read water watch")
         WaterDataStore().readWater(completion: {total in
             print("total water: \(total)")
             DispatchQueue.main.async {
