@@ -16,6 +16,9 @@
 		AF069F662441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
 		AF069F672441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
 		AF069F682441CCCD00755465 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF069F632441CCCD00755465 /* Settings.bundle */; };
+		AF069F6A2441FA5B00755465 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF069F692441FA5B00755465 /* PickerViewController.swift */; };
+		AF91EFAE24425AE9007C740E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91EFAD24425AE9007C740E /* UserDefaultsExtension.swift */; };
+		AF91EFAF24425AE9007C740E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91EFAD24425AE9007C740E /* UserDefaultsExtension.swift */; };
 		AFA170F82430EEF300571201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA170F72430EEF300571201 /* AppDelegate.swift */; };
 		AFA170FA2430EEF300571201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA170F92430EEF300571201 /* SceneDelegate.swift */; };
 		AFA170FC2430EEF300571201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA170FB2430EEF300571201 /* ViewController.swift */; };
@@ -103,6 +106,8 @@
 /* Begin PBXFileReference section */
 		AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		AF069F632441CCCD00755465 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		AF069F692441FA5B00755465 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		AF91EFAD24425AE9007C740E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		AFA170F42430EEF300571201 /* CountWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA170F72430EEF300571201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA170F92430EEF300571201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +228,7 @@
 				AFA171002430EEF600571201 /* Assets.xcassets */,
 				AFA171022430EEF600571201 /* LaunchScreen.storyboard */,
 				AFA171052430EEF600571201 /* Info.plist */,
+				AF069F692441FA5B00755465 /* PickerViewController.swift */,
 			);
 			path = CountWater;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC107842433E24600D139FC /* NotificationExtension.swift */,
+				AF91EFAD24425AE9007C740E /* UserDefaultsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -479,10 +486,12 @@
 			files = (
 				AF069F5E2441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC107852433E24600D139FC /* NotificationExtension.swift in Sources */,
+				AF069F6A2441FA5B00755465 /* PickerViewController.swift in Sources */,
 				AFA170FC2430EEF300571201 /* ViewController.swift in Sources */,
 				AFA1712D243100CC00571201 /* HealthKitSetupAssistant.swift in Sources */,
 				AFC1078B2435275C00D139FC /* WaterDataStore.swift in Sources */,
 				AFA170F82430EEF300571201 /* AppDelegate.swift in Sources */,
+				AF91EFAE24425AE9007C740E /* UserDefaultsExtension.swift in Sources */,
 				AFA170FA2430EEF300571201 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +522,7 @@
 			files = (
 				AF069F612441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC107882433E24600D139FC /* NotificationExtension.swift in Sources */,
+				AF91EFAF24425AE9007C740E /* UserDefaultsExtension.swift in Sources */,
 				AFA17148243121AE00571201 /* NotificationController.swift in Sources */,
 				AFEE08072431270D00D2BCAC /* HealthKitSetupAssistant.swift in Sources */,
 				AFC1078E2435275C00D139FC /* WaterDataStore.swift in Sources */,

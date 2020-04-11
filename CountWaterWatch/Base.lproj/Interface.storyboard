@@ -30,6 +30,8 @@
                     </items>
                     <connections>
                         <outlet property="amountLabel" destination="Prn-6N-3vg" id="k5R-Hs-9pR"/>
+                        <outlet property="bottleButton" destination="tnM-eR-HE1" id="0rr-c7-CPd"/>
+                        <outlet property="cupButton" destination="Q5N-xg-tvy" id="jcO-OR-vgT"/>
                     </connections>
                 </controller>
             </objects>
@@ -57,14 +59,14 @@
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="CountWaterWatch" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="575" y="999"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="CountWaterWatch" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="575" y="477"/>
         </scene>
     </scenes>
 </document>

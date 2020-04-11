@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var cupButton: UIButton!
     @IBOutlet var bottleButton: UIButton!
+    @IBOutlet var customButton: UIButton!
     
     let hkStore = HKHealthStore()
     var bottleAmount = SettingsBundleHelper.DefaultBottleSize
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         design(button: cupButton)
         design(button: bottleButton)
+        design(button: customButton)
         authorizeHealthKit()
         NotificationCenter.default.addObserver(
             self,
@@ -81,11 +83,11 @@ class ViewController: UIViewController {
     
     @objc func defaultsChanged(){
         SettingsBundleHelper.checkAndExecuteSettings()
-        let bottleSize = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.BottleSizeKey)
+        let bottleSize = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.BottleSizeKey, withDefault: SettingsBundleHelper.DefaultBottleSize)
         bottleButton.setTitle("1 bottle (\(bottleSize) ml)", for: .normal)
         bottleAmount = bottleSize
         
-        let cupSize = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.CupSizeKey)
+        let cupSize = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.CupSizeKey, withDefault: SettingsBundleHelper.DefaultCupSize)
         cupButton.setTitle("1 cup (\(cupSize) ml)", for: .normal)
         cupAmount = cupSize
     }

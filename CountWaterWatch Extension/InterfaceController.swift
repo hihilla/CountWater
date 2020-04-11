@@ -12,6 +12,8 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet var amountLabel: WKInterfaceLabel!
+    @IBOutlet var cupButton: WKInterfaceButton!
+    @IBOutlet var bottleButton: WKInterfaceButton!
     
     let hkStore = HKHealthStore()
     
@@ -40,7 +42,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     private func authorizeHealthKit() {
-        
         HealthKitSetupAssistant().authorize { (authorized, error) in
             guard authorized else {
                 let baseMessage = "HealthKit Authorization Failed"

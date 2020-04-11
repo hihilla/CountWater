@@ -51,22 +51,40 @@
                                     <action selector="onTouchUpInsideBottleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWL-3L-3hC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="749" verticalHuggingPriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="p5E-Zu-Ju5">
+                                <rect key="frame" x="113" y="486.5" width="188" height="47"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="custom">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UPP-P0-vun" kind="popoverPresentation" popoverAnchorView="p5E-Zu-Ju5" id="WoV-LJ-Nca">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4Ef-U0-ITZ" firstAttribute="top" secondItem="xii-eM-wdU" secondAttribute="bottom" constant="15" id="Agf-Dh-h2F"/>
                             <constraint firstItem="xii-eM-wdU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Eo8-01-ELW"/>
                             <constraint firstItem="Y6f-qK-c9B" firstAttribute="centerX" secondItem="JDK-TF-JBF" secondAttribute="centerX" id="IHy-Yq-aIL"/>
+                            <constraint firstItem="p5E-Zu-Ju5" firstAttribute="top" secondItem="Y6f-qK-c9B" secondAttribute="bottom" constant="15" id="Lhv-xs-Eoy"/>
                             <constraint firstItem="Y6f-qK-c9B" firstAttribute="top" secondItem="JDK-TF-JBF" secondAttribute="bottom" constant="15" id="QtY-Jj-FAB"/>
                             <constraint firstItem="Y6f-qK-c9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPR-fB-LwE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xii-eM-wdU" secondAttribute="trailing" symbolic="YES" id="Rd0-3p-lzj"/>
                             <constraint firstItem="4Ef-U0-ITZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="VWn-Tf-WOi"/>
                             <constraint firstItem="Y6f-qK-c9B" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JDK-TF-JBF" secondAttribute="trailing" id="VyM-Ml-Gal"/>
                             <constraint firstItem="xii-eM-wdU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="XlE-aH-FEj"/>
+                            <constraint firstItem="p5E-Zu-Ju5" firstAttribute="centerX" secondItem="Y6f-qK-c9B" secondAttribute="centerX" id="Yhz-Fa-2EW"/>
                             <constraint firstItem="JDK-TF-JBF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z61-lY-XwN"/>
                             <constraint firstItem="Y6f-qK-c9B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JDK-TF-JBF" secondAttribute="leading" id="glm-kS-5eB"/>
                             <constraint firstItem="Y6f-qK-c9B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ozR-By-zXD"/>
+                            <constraint firstItem="p5E-Zu-Ju5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y6f-qK-c9B" secondAttribute="leading" id="qFf-gi-Wiu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Ef-U0-ITZ" secondAttribute="trailing" symbolic="YES" id="qR0-Ut-msn"/>
+                            <constraint firstItem="p5E-Zu-Ju5" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y6f-qK-c9B" secondAttribute="trailing" id="vFF-iz-i1o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -74,11 +92,54 @@
                         <outlet property="amountLabel" destination="4Ef-U0-ITZ" id="M9E-hH-Vwp"/>
                         <outlet property="bottleButton" destination="Y6f-qK-c9B" id="jku-Ua-H7D"/>
                         <outlet property="cupButton" destination="JDK-TF-JBF" id="zBZ-ya-QLc"/>
+                        <outlet property="customButton" destination="p5E-Zu-Ju5" id="n23-0k-HUg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="QSj-xt-wZD">
+            <objects>
+                <viewController id="UPP-P0-vun" customClass="PickerViewController" customModule="CountWater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NdV-80-llO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jd0-en-J50">
+                                <rect key="frame" x="47" y="313" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arm-tG-eh9">
+                                <rect key="frame" x="171.5" y="544" width="71" height="47"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTouchUpInsideDoneButton:" destination="UPP-P0-vun" eventType="touchUpInside" id="h0j-A4-8an"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="arm-tG-eh9" firstAttribute="top" secondItem="Jd0-en-J50" secondAttribute="bottom" constant="15" id="3Re-qU-GCm"/>
+                            <constraint firstItem="Jd0-en-J50" firstAttribute="centerX" secondItem="NdV-80-llO" secondAttribute="centerX" id="MbL-gX-ubE"/>
+                            <constraint firstItem="arm-tG-eh9" firstAttribute="centerX" secondItem="NdV-80-llO" secondAttribute="centerX" id="cL1-N2-3JK"/>
+                            <constraint firstItem="Jd0-en-J50" firstAttribute="centerY" secondItem="NdV-80-llO" secondAttribute="centerY" id="kUP-cg-a7t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wgg-dL-V9G"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="arm-tG-eh9" id="nK8-xW-Q0f"/>
+                        <outlet property="pickerView" destination="Jd0-en-J50" id="yGX-ye-xmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wat-JY-1n0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="110"/>
         </scene>
     </scenes>
 </document>
