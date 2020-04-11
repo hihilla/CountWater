@@ -6,6 +6,29 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <scenes>
+        <!--Picker Interface Controller-->
+        <scene sceneID="VIa-fb-sjU">
+            <objects>
+                <controller id="n1Q-Dk-KYS" customClass="PickerInterfaceController" customModule="CountWaterWatch" customModuleProvider="target">
+                    <items>
+                        <picker height="100" alignment="left" id="7Ws-fJ-EKO">
+                            <connections>
+                                <action selector="pickerChanged:" destination="n1Q-Dk-KYS" id="zk7-dG-v1b"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Done" id="mRM-lb-ML1">
+                            <connections>
+                                <action selector="onTouchUpInsideDoneButton" destination="n1Q-Dk-KYS" id="EBC-Kb-elh"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picker" destination="7Ws-fJ-EKO" id="Tui-De-sgg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-106" y="337"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
@@ -23,6 +46,12 @@
                                 <button width="1" alignment="left" title="1 bottle" id="tnM-eR-HE1">
                                     <connections>
                                         <action selector="onClickBottle" destination="AgC-eL-Hgc" id="ckE-6F-8io"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="custom" id="Hxk-w6-6JQ" userLabel="custom">
+                                    <connections>
+                                        <action selector="onClickBottle" destination="AgC-eL-Hgc" id="cc7-me-xC8"/>
+                                        <segue destination="n1Q-Dk-KYS" kind="modal" id="6yT-xU-2Ic"/>
                                     </connections>
                                 </button>
                             </items>
