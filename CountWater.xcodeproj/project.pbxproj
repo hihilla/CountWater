@@ -710,6 +710,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CountWater/CountWater.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 66THQLWY48;
 				INFOPLIST_FILE = CountWater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,6 +730,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CountWater/CountWaterRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 66THQLWY48;
 				INFOPLIST_FILE = CountWater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -842,6 +844,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "CountWaterWatch Extension/CountWaterWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 66THQLWY48;
 				INFOPLIST_FILE = "CountWaterWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -865,6 +868,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "CountWaterWatch Extension/CountWaterWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 66THQLWY48;
 				INFOPLIST_FILE = "CountWaterWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -889,6 +893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 66THQLWY48;
 				IBSC_MODULE = CountWaterWatch_Extension;
 				INFOPLIST_FILE = CountWaterWatch/Info.plist;
@@ -916,6 +921,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 66THQLWY48;
 				IBSC_MODULE = CountWaterWatch_Extension;
 				INFOPLIST_FILE = CountWaterWatch/Info.plist;
