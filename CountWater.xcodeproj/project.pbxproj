@@ -107,6 +107,7 @@
 		AF069F5D2441C22B00755465 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		AF069F632441CCCD00755465 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AF069F692441FA5B00755465 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		AF22C5DB25DD79DA00A0DA9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AF91EFAD24425AE9007C740E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		AF91EFB024425E36007C740E /* PickerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInterfaceController.swift; sourceTree = "<group>"; };
 		AFA170F42430EEF300571201 /* CountWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +194,7 @@
 		AFA170EB2430EEF300571201 = {
 			isa = PBXGroup;
 			children = (
+				AF22C5DB25DD79DA00A0DA9E /* README.md */,
 				AF069F622441CCBE00755465 /* Settings */,
 				AF069F5C2441C21400755465 /* SettingsBundleHelper */,
 				AFC1078924350B4E00D139FC /* HealthKitHelpers */,
@@ -524,7 +526,6 @@
 			files = (
 				AF069F612441C22B00755465 /* SettingsBundleHelper.swift in Sources */,
 				AFC107882433E24600D139FC /* NotificationExtension.swift in Sources */,
-				AF91EFAF24425AE9007C740E /* UserDefaultsExtension.swift in Sources */,
 				AFA17148243121AE00571201 /* NotificationController.swift in Sources */,
 				AFEE08072431270D00D2BCAC /* HealthKitSetupAssistant.swift in Sources */,
 				AFC1078E2435275C00D139FC /* WaterDataStore.swift in Sources */,
